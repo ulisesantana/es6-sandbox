@@ -1,0 +1,35 @@
+{
+  "name": "es6-sandbox",
+  "version": "0.1.0",
+  "description": "A sandbox project for testing JavaScript ES2015+ features.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "start:babel": "babel-node src/index.js",
+    "test": "mocha --ui tdd --require babel-core/register 'src/**/*.test.js'",
+    "tdd": "npm test -- --watch",
+    "build": "babel src -d dist",
+    "dev": "nodemon --watch src --exec babel-node src/index.js"
+  },
+  "keywords": [
+    "es6",
+    "lab",
+    "sandbox",
+    "test"
+  ],
+  "author": "Ulises Santana <ulisesantana@gmail.com>",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/ulisesantana/es6-sandbox.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "winston": "2.4.1",
+    "mocha": "^4.0.1"
+  },
+  "devDependencies": {
+    "babel-preset-node8": "^1.2.0",
+    "babel-cli": "^6.26.0",
+    "nodemon": "^1.12.1"
+  }
+}
